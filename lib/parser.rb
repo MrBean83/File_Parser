@@ -1,5 +1,5 @@
 class Parser
-	def initialize(file_name)
+  def initialize(file_name)
     @file = File.open(file_name, 'r+')
     @configuration = {}
     parse_file
