@@ -40,7 +40,7 @@ describe Parser do
 		end
 
 		it "returns the integer value" do
-			parser.get_integer("header", "accessed").should eq 205 #string quotes here?
+			parser.get_integer("header", "accessed").should eq 205
 		end
 
 		it "returns an Integer object" do
@@ -55,7 +55,7 @@ describe Parser do
 		end
 
 		it "returns the float value" do
-			parser.get_float("header", "budget").should eq 4.5 # string quotes here?
+			parser.get_float("header", "budget").should eq 4.5
 		end
 
 		it "returns a Float object" do
