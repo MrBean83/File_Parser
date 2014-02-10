@@ -33,6 +33,11 @@ describe Parser do
 			string_parser.should be_an_instance_of String
 		end
 	end
+	
+=begin
+	For integers, I wanted to be more specific about returning an instance of the Fixnum class 
+	instead of its Integer superclass.
+=end
 
 	context "#get_integer" do
 		it "requires two parameters" do
@@ -43,7 +48,7 @@ describe Parser do
 			parser.get_integer("header", "accessed").should eq 205
 		end
 
-		it "returns an Integer object" do
+		it "returns a Fixnum object" do
 			integer_parser = parser.get_integer("header", "accessed")
 			integer_parser.should be_an_instance_of Fixnum
 		end
@@ -78,17 +83,22 @@ describe Parser do
 			string_setter.should be_an_instance_of String
 		end
 	end
+	
+=begin
+	For integers, I wanted to be more specific about returning an instance of the Fixnum class 
+	instead of its Integer superclass.
+=end
 
 	context "#set_integer" do
 		it "requires three parameters" do
 			expect { parser.set_integer("header", "accessed") }.to raise_error(ArgumentError)
 		end
 
-		it "returns the Fixnum value" do
+		it "returns the integer value" do
 			parser.set_integer("header", "accessed", 187).should eq 187
 		end
 
-		it "returns an Integer object" do
+		it "returns a Fixnum object" do
 			integer_setter = parser.set_integer("header", "accessed", 187)
 			integer_setter.should be_an_instance_of Fixnum
 		end
