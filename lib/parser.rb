@@ -1,3 +1,13 @@
+=begin
+While considering single responsibilities and a separation of concerns for this project, I initially considered
+there to be as many as three classes: Configuration, Section, and Parser. However, for the scope of this exercise,
+I felt it was easier to condense the responsibilities into a single class with a majority of the inner machinery
+determined through private methods. In place of a Configuration class, I have included an instance variable
+(@configuration) instantiated as an empty hash, which will be built via private methods and indexed by its
+getter and setter methods. In place of a Section class, I have designed a parse_file method, along with several 
+other private methods using regular expressions, to determine how to organize the files by section name and key.
+=end
+
 class Parser
   def initialize(file_name)
     @file = File.open(file_name, 'r+')
