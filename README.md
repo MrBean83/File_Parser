@@ -55,7 +55,7 @@ You may use the following test data for your development:
   accessed :205
 
   [meta data]
-  description : This is a tediously long description of the Lonely Planet
+  description : This is a tediously long description of the
     programming test that you are taking. Tedious isn't the right word, but
     it's the first word that comes to mind.
 
@@ -63,4 +63,3 @@ You may use the following test data for your development:
 
   [ trailer ]
   budget:all out of budget.
-
