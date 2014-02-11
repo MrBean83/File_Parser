@@ -77,6 +77,12 @@ reset the @file object each time a setter is called and write the new set of val
     output = build_output
     @file.write(output)
   end
+  
+=begin
+The method with the most responsibility, parse_file is called in every Parser object's instantiation. Underneath it
+are several verification methods, utilizing regular expressions, which determine how different sequences of characters
+in a given filename are read in and organized by the Parser object.
+=end
 
   def parse_file    
     @file.readlines.each_with_index do |line, index|
@@ -129,6 +135,11 @@ reset the @file object each time a setter is called and write the new set of val
       raise_exception
     end
   end
+
+=begin  
+Here I define a generic parser error in case the argument for one of the private setters is not determined to be
+'truthy' via the @current_section and @current_key instance variables.
+=end
 
   def raise_exception(message = "Parser error")
     raise Exception.new(message)
