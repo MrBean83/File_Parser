@@ -1,7 +1,7 @@
 File_Parser
 ===========
 
-I built this Parser object through a coding challenge for a Nashville-based Ruby on Rails shop.
+I built this Parser object through a coding challenge for a Greater Nashville-based Rails shop.
 -----------------------------------------------------------------------------------------------
 
 Design and implement a class that can parse the following configuration file format:
