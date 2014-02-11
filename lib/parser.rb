@@ -38,6 +38,15 @@ class Parser
   def set_float(section, key, value)
     set_value(section, key, Float(value))
   end
+  
+=begin
+As you can see, between the shared responsibilities of the getter/setter methods, I decided to separate the
+responsibility for initially indexing a hash value (in the private methods) from the responsibility to ensure
+that each object was being returned as an instance of the appropriate class (public methods). Within the logic
+for set_value, I pre-set each section as an empty hash if its value is not already determined. In build_output,
+I construct how each section, along with its keys and values, will be rendered in the view. In write_file, I
+reset the @file object each time a setter is called and write the new set of values to file.
+=end
 
   private
 
