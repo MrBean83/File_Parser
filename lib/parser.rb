@@ -81,7 +81,9 @@ reset the @file object each time a setter is called and write the new set of val
 =begin
 The method with the most responsibility, parse_file is called in every Parser object's instantiation. Underneath it
 are several verification methods, utilizing regular expressions, which determine how different sequences of characters
-in a given filename are read in and organized by the Parser object.
+in a given filename are read in and organized by the Parser object. During my first jog through this exercise towards
+MVP, many of the checker and setter methods below were consolidated in two larger methods with entangled
+responsibilities, so I refactored them to separate the concerns into no more than five lines apiece.
 =end
 
   def parse_file    
